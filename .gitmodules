@@ -1,0 +1,3 @@
+[submodule "bwce-first-library"]
+	path = bwce-first-library
+	url = https://github.com/DarkSined/bwce-first-library
