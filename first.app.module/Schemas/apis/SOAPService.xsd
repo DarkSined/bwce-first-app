@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.tibco.org/SOAPService" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.org/SOAPService">
+
+    <element name="Request">
+    	<complexType>
+    		<sequence>
+    			<element name="name" type="string"></element>
+    		</sequence>
+    	</complexType></element>
+
+    <element name="Response">
+    	<complexType>
+    		<sequence>
+    			<element name="encodedName" type="string"></element>
+    		</sequence>
+    	</complexType></element>
+</schema>
