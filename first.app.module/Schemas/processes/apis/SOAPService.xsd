@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.tibco.org/SOAPService" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.org/SOAPService">
+
+    <complexType name="CalculateHexadecimalRequestType">
+    	<sequence>
+    		<element name="string" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="CalculateHexadecimalResponseType">
+    	<sequence>
+    		<element name="exadecimal" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="CalculateHexadecimalRequest" type="tns:CalculateHexadecimalRequestType"></element>
+
+    <element name="CalculateHexadecimalResponse" type="tns:CalculateHexadecimalResponseType"></element>
+</schema>

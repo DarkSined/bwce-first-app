@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:SOAPService="http://www.tibco.com/SOAPService/" xmlns:SOAPService_1="http://www.tibco.org/SOAPService" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_-DnT4ND_Eey2puat9og6-w" targetNamespace="http://tns.tibco.com/bw/composite/first.app.module" name="first.app.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
-  <sca:service xmi:id="_x3yGQPBmEeyi75PnKvNwDQ" name="SOAPServicePortType" promote="ComponentSOAPService/SOAPServicePortType">
-    <sca:interface.wsdl xmi:id="_x39FYPBmEeyi75PnKvNwDQ" interface="http://www.tibco.com/SOAPService/#wsdl.interface(SOAPServicePortType)" scaext:wsdlLocation="../Service%20Descriptors/SOAPService.wsdl"/>
-    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_0oDOcPBmEeyi75PnKvNwDQ" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/0e13c8232f444437b9e7e091e563b3b6/SOAPServiceBinding" portTypeQName="SOAPService:SOAPServicePortType" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/first.app.module/Service%20Descriptors/SOAPService.wsdl">
-      <bindingType xmi:id="_0oM_cPBmEeyi75PnKvNwDQ"/>
-      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_I1R8wPBnEeyi75PnKvNwDQ" endpointURI="/SOAPService" httpConnector="http.HTTPConnectorResource"/>
-      <operationConfiguration xmi:id="_0oM_cfBmEeyi75PnKvNwDQ" operationName="sayHello" action="sayHello" actionNeeded="true">
-        <bindingType xmi:id="_0oM_cvBmEeyi75PnKvNwDQ"/>
-        <messageConfiguration xmi:id="_0oM_c_BmEeyi75PnKvNwDQ" messageQName="SOAPService:sayHelloRequest" wsdlLocation="platform:/resource/first.app.module/Service%20Descriptors/SOAPService.wsdl">
-          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_0oM_dPBmEeyi75PnKvNwDQ" partName="parameters" partElementName="SOAPService_1:Request"/>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:CustomException="http://www.tibco.org/CustomException" xmlns:SOAPService="http://www.tibco.com/SOAPService/" xmlns:SOAPService_1="http://www.tibco.org/SOAPService" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:library="http://www.tibco.org/library" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_-DnT4ND_Eey2puat9og6-w" targetNamespace="http://tns.tibco.com/bw/composite/first.app.module" name="first.app.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_SLCCkAScEe2phYKHt7q-iA" name="SOAPService" promote="ComponentSOAPService/SOAPService">
+    <sca:interface.wsdl xmi:id="_SLUWcAScEe2phYKHt7q-iA" interface="http://www.tibco.com/SOAPService/#wsdl.interface(SOAPService)" scaext:wsdlLocation="../Service%20Descriptors/main/SOAPService.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_vaFhQASdEe2phYKHt7q-iA" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/986d6fcc910b481b9c6427442751f5b1/SOAPServiceBinding" portTypeQName="SOAPService:SOAPService" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/first.app.module/Service%20Descriptors/main/SOAPService.wsdl">
+      <bindingType xmi:id="_vaS8oASdEe2phYKHt7q-iA"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_1lGSAASdEe2phYKHt7q-iA" endpointURI="/tibco/soap/service" httpConnector="http.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_vaTjsASdEe2phYKHt7q-iA" operationName="calculateHexadecimal" action="calculateHexadecimal" actionNeeded="true">
+        <bindingType xmi:id="_vaTjsQSdEe2phYKHt7q-iA"/>
+        <messageConfiguration xmi:id="_vaTjsgSdEe2phYKHt7q-iA" messageQName="SOAPService:calculateHexadecimalRequest" wsdlLocation="platform:/resource/first.app.module/Service%20Descriptors/main/SOAPService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_vaTjswSdEe2phYKHt7q-iA" partName="parameters" partElementName="library:CalculateHexadecimalIn"/>
         </messageConfiguration>
-        <messageConfiguration xmi:id="_0oM_dfBmEeyi75PnKvNwDQ" messageQName="SOAPService:sayHelloResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/first.app.module/Service%20Descriptors/SOAPService.wsdl">
-          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_0oM_dvBmEeyi75PnKvNwDQ" partName="parameters" partElementName="SOAPService_1:Response"/>
+        <messageConfiguration xmi:id="_vaTjtASdEe2phYKHt7q-iA" messageQName="SOAPService:calculateHexadecimalResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/first.app.module/Service%20Descriptors/main/SOAPService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_vaTjtQSdEe2phYKHt7q-iA" partName="parameters" partElementName="library:CalculateHexadecimalOut"/>
         </messageConfiguration>
-        <context xmi:id="_0oM_d_BmEeyi75PnKvNwDQ">
-          <inputMapping xmi:id="_0oM_ePBmEeyi75PnKvNwDQ"/>
-          <outputMapping xmi:id="_0oM_efBmEeyi75PnKvNwDQ" direction="OUTPUT"/>
+        <messageConfiguration xmi:id="_vaTjtgSdEe2phYKHt7q-iA" messageQName="SOAPService:calculateHexadecimalFault" messageDirection="FAULT" action="fault" wsdlLocation="platform:/resource/first.app.module/Service%20Descriptors/main/SOAPService.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_vaTjtwSdEe2phYKHt7q-iA" partName="parameters" partElementName="CustomException:CalculateHexadecimalException"/>
+        </messageConfiguration>
+        <context xmi:id="_vaTjuASdEe2phYKHt7q-iA">
+          <inputMapping xmi:id="_vaTjuQSdEe2phYKHt7q-iA"/>
+          <outputMapping xmi:id="_vaUKwASdEe2phYKHt7q-iA" direction="OUTPUT"/>
+          <faultMappings xmi:id="_vaaRYASdEe2phYKHt7q-iA" direction="FAULT" faultName="fault"/>
         </context>
       </operationConfiguration>
     </scaext:binding>
-    <scact:bindingAdjunct xmi:id="_0oM_evBmEeyi75PnKvNwDQ" bindingName="SOAPServiceBinding"/>
+    <scact:bindingAdjunct xmi:id="_vaaRYQSdEe2phYKHt7q-iA" bindingName="SOAPServiceBinding"/>
   </sca:service>
   <sca:property xmi:id="_AWeHUNEAEey2puat9og6-w" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_AWwbMNEAEey2puat9og6-w" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
@@ -28,13 +32,10 @@
   <sca:property xmi:id="_AXI1sNEAEey2puat9og6-w" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_AXQxgNEAEey2puat9og6-w" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
   <sca:property xmi:id="_AXVqANEAEey2puat9og6-w" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:component xmi:id="__uQ30ND_Eey2puat9og6-w" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="__uSF8ND_Eey2puat9og6-w" processName="first.app.module.Process"/>
-  </sca:component>
-  <sca:component xmi:id="_9VfVIPBlEeyi75PnKvNwDQ" name="ComponentSOAPService" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_9VfVIfBlEeyi75PnKvNwDQ" processName="first.app.module.SOAPService"/>
-    <sca:service xmi:id="_x3l5APBmEeyi75PnKvNwDQ" name="SOAPServicePortType">
-      <sca:interface.wsdl xmi:id="_x3l5AfBmEeyi75PnKvNwDQ" interface="http://www.tibco.com/SOAPService/#wsdl.interface(SOAPServicePortType)" scaext:wsdlLocation="../Service%20Descriptors/SOAPService.wsdl"/>
+  <sca:component xmi:id="_LHj_0AScEe2phYKHt7q-iA" name="ComponentSOAPService" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_LHj_0QScEe2phYKHt7q-iA" processName="first.app.main.SOAPService"/>
+    <sca:service xmi:id="_SK6t0AScEe2phYKHt7q-iA" name="SOAPService">
+      <sca:interface.wsdl xmi:id="_SK9KEAScEe2phYKHt7q-iA" interface="http://www.tibco.com/SOAPService/#wsdl.interface(SOAPService)"/>
     </sca:service>
   </sca:component>
 </sca:composite>

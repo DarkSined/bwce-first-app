@@ -1,3 +1,6 @@
 [submodule "bwce-first-library"]
 	path = bwce-first-library
 	url = https://github.com/DarkSined/bwce-first-library
+[submodule "bw-log-library"]
+	path = bw-log-library
+	url = https://github.com/DarkSined/bw-log-library.git

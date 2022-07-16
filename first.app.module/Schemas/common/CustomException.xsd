@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.tibco.org/CustomException" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.org/CustomException">
+
+    <complexType name="BaseExceptionType">
+    	<sequence>
+    		<element name="message" type="string"></element>
+    		<element name="stacktrace" type="string" minOccurs="0"></element>
+    		<element name="code" type="tns:exceptionCodeType"></element>
+    	</sequence>
+    </complexType>
+
+    <simpleType name="exceptionCodeType">
+    	<restriction base="string">
+    		<enumeration value="ENTITY_NOT_FOUND"></enumeration>
+    		<enumeration value="REQUEST_NOT_VALID"></enumeration>
+    		<enumeration value="INTERNAL_ERROR"></enumeration>
+    	</restriction>
+    </simpleType>
+
+    <complexType name="CalculateHexadecimalExceptionType">
+    	<sequence>
+    		<element name="Exception" type="tns:BaseExceptionType"></element>
+    		<element name="operation" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="CalculateHexadecimalException" type="tns:CalculateHexadecimalExceptionType"></element>
+</schema>
